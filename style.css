@@ -1,0 +1,82 @@
+
+*{font-famliy:궁서체;}
+
+
+h1 { color:blue; 
+     background-color:yellow;
+     border:2px solid red;
+     padding:20px;
+     border-radius:50px;
+     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+
+h1:hover{
+
+background-color:green;
+  
+}
+
+
+      p{
+
+      font-weight:bold;
+        text-align:center;  
+        
+      }
+
+      li{
+
+       text-decoration:underline
+        
+      }
+
+
+h1#next {
+
+background-color:pink;
+
+  
+}
+
+
+h1#next:hover {
+
+background-color:red;
+
+}
+
+#later{
+
+color:red;
+  
+  
+}
+
+
+.inner {
+
+
+  text-decoration:none;
+  color:gray;
+}
+
+#later, .inner{
+
+font-weight:bold;
+  
+}
+
+
+h3 div {
+
+
+  color:green
+}
+
+h3 div {
+
+color:blue;
+
+  
+}
