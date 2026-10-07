@@ -1,82 +1,314 @@
-
-*{font-famliy:궁서체;}
-
-
-h1 { color:blue; 
-     background-color:yellow;
-     border:2px solid red;
-     padding:20px;
-     border-radius:50px;
-     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+/* 초기화 및 전역 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-
-h1:hover{
-
-background-color:green;
-  
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f4f6fa;
+    color: #1b2a4a;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
 }
 
-
-      p{
-
-      font-weight:bold;
-        text-align:center;  
-        
-      }
-
-      li{
-
-       text-decoration:underline
-        
-      }
-
-
-h1#next {
-
-background-color:pink;
-
-  
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-
-h1#next:hover {
-
-background-color:red;
-
+/* 1. 눈에 잘 띄는 고정형 네비게이션 바 */
+.site-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(27, 42, 74, 0.95); /* 반투명 네이비 */
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-#later{
-
-color:red;
-  
-  
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-
-.inner {
-
-
-  text-decoration:none;
-  color:gray;
+.site-header .logo {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #ffffff;
+    letter-spacing: -0.05em;
 }
 
-#later, .inner{
-
-font-weight:bold;
-  
+.site-header .logo span {
+    color: #ff6b35; /* 오렌지 포인트 닷 */
 }
 
-
-h3 div {
-
-
-  color:green
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
 
-h3 div {
+.site-header nav a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-weight: 400;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
 
-color:blue;
+.site-header nav a:hover {
+    color: #ffffff;
+}
 
-  
+/* 네비게이션 안의 강조 버튼(CTA) 스타일 */
+.site-header nav a.nav-cta {
+    background-color: #ff6b35;
+    color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.site-header nav a.nav-cta:hover {
+    background-color: #e85a24;
+    transform: translateY(-2px);
+}
+
+/* 메인 인트로 섹션 */
+.hero-section {
+    padding: 130px 0 90px;
+}
+
+.sub-title {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: #ff6b35;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.main-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #1b2a4a;
+}
+
+.main-title .highlight {
+    color: #ff6b35;
+    border-bottom: 3px solid #ff6b35;
+    padding-bottom: 2px;
+}
+
+/* 2. 자기소개 카드 스타일 */
+.about-section {
+    padding: 70px 0;
+}
+
+.section-heading {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #1b2a4a;
+    letter-spacing: -0.03em;
+}
+
+.about-card {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(27, 42, 74, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.about-card p {
+    font-size: 1.15rem;
+    color: #2d3748;
+    line-height: 1.8;
+}
+
+.about-card strong {
+    font-weight: 700;
+    color: #ff6b35;
+}
+
+/* 3. 연락처 및 문의하기 카드 섹션 */
+.contact-section {
+    padding: 70px 0 120px;
+}
+
+.contact-desc {
+    color: #4a5568;
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+}
+
+/* 정보 카드 그리드 배치 (3개의 카드가 나란히) */
+.info-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.info-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 5px 15px rgba(27, 42, 74, 0.03);
+    text-align: center;
+}
+
+.card-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #ff6b35;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+}
+
+.card-value {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #1b2a4a;
+    word-break: break-all;
+}
+
+/* 소셜 링크 버튼 */
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.social-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: 1px solid #1b2a4a;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #1b2a4a;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    transition: all 0.2s ease;
+}
+
+.social-btn:hover {
+    background-color: #ff6b35;
+    border-color: #ff6b35;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* 문의하기 폼 카드 스타일 */
+.inquiry-card-form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(27, 42, 74, 0.05);
+}
+
+.form-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1b2a4a;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1b2a4a;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+    background-color: #f8fafc;
+    transition: all 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff6b35;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.15);
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #1b2a4a;
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.submit-sbtn:hover, .submit-btn:hover {
+    background-color: #ff6b35;
+    transform: translateY(-2px);
+}
+
+/* 푸터 */
+.site-footer {
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #718096;
+    border-top: 1px solid #e2e8f0;
+    background-color: #ffffff;
+}
+
+/* 반응형 디자인 (모바일 대응) */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.1rem;
+    }
+    .header-container {
+        padding: 15px 20px;
+    }
+    .info-card-grid {
+        grid-template-columns: 1fr; /* 모바일에서는 카드가 세로로 쌓이게 */
+    }
+    .social-links {
+        flex-direction: column;
+    }
+    .inquiry-card-form {
+        padding: 25px;
+    }
 }
