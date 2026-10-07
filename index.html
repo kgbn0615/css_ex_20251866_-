@@ -11,12 +11,13 @@
 </head>
 <body>
 
-    <!-- 눈에 잘 띄는 고정 네비게이션 바 -->
+    <!-- 상단 고정 네비게이션 바 -->
     <header class="site-header">
         <div class="header-container">
             <div class="logo">Gabin.log<span>.</span></div>
             <nav class="nav-links">
                 <a href="#about">About</a>
+                <a href="#portfolio">Portfolio</a>
                 <a href="#contact" class="nav-cta">Contact</a>
             </nav>
         </div>
@@ -48,7 +49,71 @@
         </div>
     </section>
 
-    <!-- 연락처 및 문의하기 섹션 (카드 형태 레이아웃) -->
+    <!-- 포트폴리오 모음집 섹션 -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <h2 class="section-heading">My Portfolio</h2>
+            <p class="contact-desc">지금까지 진행했던 웹 프로젝트 작업물 모음입니다.</p>
+
+            <div class="portfolio-grid">
+                <!-- 프로젝트 1: 첫번째 작품 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-img-box">
+                        <span>Mini Web</span>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="project-tag">Web Publishing</span>
+                        <h3 class="project-title">첫 번째 프로젝트</h3>
+                        <p class="project-desc">
+                            HTML과 CSS를 활용하여 처음으로 구성해 본 미니 웹사이트 작업물입니다.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://kgbn0615.github.io/miniweb-gabhin-/" target="_blank" class="project-btn">사이트 보기</a>
+                            <a href="https://github.com/kgbn0615/miniweb-gabhin-" target="_blank" class="project-btn outline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 프로젝트 2: 두번째 작품 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-img-box" style="background-color: #2c3e50;">
+                        <span>Portfolio V1</span>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="project-tag">UI/UX & Web</span>
+                        <h3 class="project-title">두 번째 프로젝트</h3>
+                        <p class="project-desc">
+                            나만의 개성을 담아 다양하게 구조화해 본 포트폴리오 웹사이트입니다.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://kgbn0615.github.io/gabin-s-portfolio/" target="_blank" class="project-btn">사이트 보기</a>
+                            <a href="https://github.com/kgbn0615/gabin-s-portfolio" target="_blank" class="project-btn outline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 프로젝트 3: 세번째 작품 (파티세리/베이커리) -->
+                <div class="portfolio-card">
+                    <div class="portfolio-img-box" style="background-color: #34495e;">
+                        <span>Bin's Bakery</span>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="project-tag">Responsive Web</span>
+                        <h3 class="project-title">빈스 베이커리 (파티세리)</h3>
+                        <p class="project-desc">
+                            달콤한 디저트와 슬라이드 쇼 기능을 담아 완성도 있게 제작한 베이커리 웹사이트입니다.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://kgbn0615.github.io/bin-s-bakery/" target="_blank" class="project-btn">사이트 보기</a>
+                            <a href="https://github.com/kgbn0615/bin-s-bakery" target="_blank" class="project-btn outline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 연락처 및 문의하기 섹션 -->
     <section id="contact" class="contact-section">
         <div class="container">
             <h2 class="section-heading">Contact & Inquiry</h2>
@@ -74,10 +139,10 @@
             <div class="social-links">
                 <a href="mailto:svbnm1123@gmail.com" class="social-btn">Email 보내기</a>
                 <a href="https://instagram.com/kgbn0615" target="_blank" class="social-btn">Instagram</a>
-                <a href="https://github.com" target="_blank" class="social-btn">GitHub</a>
+                <a href="https://github.com/kgbn0615" target="_blank" class="social-btn">GitHub</a>
             </div>
 
-            <!-- 세련된 문의하기 폼 카드 -->
+            <!-- 문의하기 폼 카드 -->
             <form class="inquiry-card-form" onsubmit="event.preventDefault(); alert('문의가 성공적으로 전송되었습니다!');">
                 <h3 class="form-title">메시지 남기기</h3>
                 <div class="form-group">
